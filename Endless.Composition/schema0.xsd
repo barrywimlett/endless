@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="FilterAssemblyHasAttributesConfig" nillable="true" type="FilterAssemblyHasAttributesConfig" />
+  <xs:complexType name="FilterAssemblyHasAttributesConfig">
+    <xs:complexContent mixed="false">
+      <xs:extension base="AssemblyFilterConfigBase" />
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:complexType name="AssemblyFilterConfigBase" abstract="true" />
+  <xs:element name="FilterAssemblyByNameConfig" nillable="true" type="FilterAssemblyByNameConfig" />
+  <xs:complexType name="FilterAssemblyByNameConfig">
+    <xs:complexContent mixed="false">
+      <xs:extension base="AssemblyFilterConfigBase">
+        <xs:attribute name="NameCheckType" type="NameCheckTypeEnum" use="required" />
+        <xs:attribute name="PartialName" type="xs:string" />
+        <xs:attribute name="ComparisonType" type="StringComparison" use="required" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:simpleType name="NameCheckTypeEnum">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="StartsWith" />
+      <xs:enumeration value="EndsWith" />
+      <xs:enumeration value="Contains" />
+      <xs:enumeration value="Equals" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="StringComparison">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="CurrentCulture" />
+      <xs:enumeration value="CurrentCultureIgnoreCase" />
+      <xs:enumeration value="InvariantCulture" />
+      <xs:enumeration value="InvariantCultureIgnoreCase" />
+      <xs:enumeration value="Ordinal" />
+      <xs:enumeration value="OrdinalIgnoreCase" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="FilterAssemblyBySigningKeyConfig" nillable="true" type="FilterAssemblyBySigningKeyConfig" />
+  <xs:complexType name="FilterAssemblyBySigningKeyConfig">
+    <xs:complexContent mixed="false">
+      <xs:extension base="AssemblyFilterConfigBase">
+        <xs:attribute name="PublicKeyToken" type="xs:base64Binary" />
+      </xs:extension>
+    </xs:complexContent>
+  </xs:complexType>
+  <xs:element name="Config" nillable="true" type="Config" />
+  <xs:complexType name="Config">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Sources" type="SequenceOfAssemblySourceConfigBase" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Includes" type="SequenceOfAssemblyFilterConfigBase" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Excludes" type="SequenceOfAssemblyFilterConfigBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SequenceOfAssemblySourceConfigBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssemblySourceConfigBase" nillable="true" type="AssemblySourceConfigBase" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="AssemblySourceConfigBase" abstract="true" />
+  <xs:complexType name="SequenceOfAssemblyFilterConfigBase">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="AssemblyFilterConfigBase" nillable="true" type="AssemblyFilterConfigBase" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

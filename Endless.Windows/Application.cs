@@ -6,8 +6,8 @@ using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
-using log4net;
-using log4net.Core;
+using System.Windows.Threading;
+
 
 namespace Endless.Windows
 {
@@ -15,13 +15,12 @@ namespace Endless.Windows
     {
         public static class ExceptionHandling
         {
-            private static readonly ILog logger = LogManager.GetLogger(typeof(ExceptionHandling));
 
             /// <summary>
             /// Setups the specified application with exception logging for terminal errors.
             /// </summary>
             /// <param name="app">The application.</param>
-            public static void Setup(Application app)
+            public static void Setup(System.Windows.Application app)
             {
                 Contract.Requires(app != null);
 
@@ -37,8 +36,7 @@ namespace Endless.Windows
             /// </summary>
             /// <param name="sender">The source of the event.</param>
             /// <param name="e">The <see cref="System.Windows.Threading.DispatcherUnhandledExceptionEventArgs"/> instance containing the event data.</param>
-            private static void Current_DispatcherUnhandledException(Application app,
-    System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+            private static void Current_DispatcherUnhandledException(Application app,DispatcherUnhandledExceptionEventArgs e)
             {
                 e.Handled = true;
                 LogException("Dispatcher unhandled exception", e.Exception);

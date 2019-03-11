@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28705.295
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Libraries", "Libraries\Libraries.csproj", "{5EE7B51B-C84C-4FAC-8925-680BC334400E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless", "Endless\Endless.csproj", "{A28B2B4C-01AF-4D55-B3F5-17BF918D43D5}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Composition", "Endless.Composition\Endless.Composition.csproj", "{119244AA-FFB0-41D5-924A-0E43B52D747D}"
@@ -25,9 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Collections", "Endl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.ComponentModel", "Endless.ComponentModel\Endless.ComponentModel.csproj", "{EC0F22B9-9845-4059-B57E-B90F59EA4198}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endless.Data", "Endless.Data\Endless.Data.csproj", "{6CE89B90-05D0-4905-BF05-A10BD8ADB9C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Data", "Endless.Data\Endless.Data.csproj", "{6CE89B90-05D0-4905-BF05-A10BD8ADB9C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Endless.Configuration", "Endless.Configuration\Endless.Configuration.csproj", "{84C7575D-259E-46E3-B8DC-34D15B1CAD18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Configuration", "Endless.Configuration\Endless.Configuration.csproj", "{84C7575D-259E-46E3-B8DC-34D15B1CAD18}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,10 +33,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5EE7B51B-C84C-4FAC-8925-680BC334400E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5EE7B51B-C84C-4FAC-8925-680BC334400E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5EE7B51B-C84C-4FAC-8925-680BC334400E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5EE7B51B-C84C-4FAC-8925-680BC334400E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A28B2B4C-01AF-4D55-B3F5-17BF918D43D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A28B2B4C-01AF-4D55-B3F5-17BF918D43D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A28B2B4C-01AF-4D55-B3F5-17BF918D43D5}.Release|Any CPU.ActiveCfg = Release|Any CPU

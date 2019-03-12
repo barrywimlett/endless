@@ -183,4 +183,52 @@ namespace Endless.Data
 
         }
     }
+    
+    public static class TimedExecution
+    {
+        public static void Do(string description, Action action)
+        {
+            DateTime start = DateTime.UtcNow;
+            Trace.TraceInformation($"Started {description}");
+            try
+            {
+                action();
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError($"Exception thrown during timed section");
+                Trace.TraceError(ex.Message);
+            }
+            finally
+            {
+                DateTime end = DateTime.UtcNow;
+                Trace.TraceInformation($"Finished {description} took {end-start}");
+            }
+            
+        }
+
+        public static TResult Do<TResult>(string description, Func<TResult> function)
+        {
+            DateTime start = DateTime.UtcNow;
+            Trace.TraceInformation($"Started {description}");
+            try
+            {
+                return function();
+            }
+            catch (Exception ex)
+            {
+                Trace.TraceError($"Exception thrown during timed section");
+                Trace.TraceError(ex.Message);
+                throw;
+            }
+            finally
+            {
+                DateTime end = DateTime.UtcNow;
+                Trace.TraceInformation($"Finished {description} took {end - start}");
+            }
+
+        }
+
+    }
+
 }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace Endless.Data
+namespace Endless.Data.ADO
 {
     public static class DataReaderHelper
     {

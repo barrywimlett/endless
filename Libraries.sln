@@ -9,15 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Composition", "Endl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Composition.Test", "Endless.Composition.Test\Endless.Composition.Test.csproj", "{A04268F2-7F48-4A56-9B65-F55D02944B85}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.EntityFramework", "Endless.EntityFramework\Endless.EntityFramework.csproj", "{03B7BAB1-2D04-4F63-A9D9-994F9C53D85D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Diagnostics.Exceptions.EntityFramework", "Endless.EntityFramework\Endless.Diagnostics.Exceptions.EntityFramework.csproj", "{03B7BAB1-2D04-4F63-A9D9-994F9C53D85D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Windows", "Endless.Windows\Endless.Windows.csproj", "{9775857B-5B45-4792-B0AA-8E35AEFE9E62}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Exceptions", "Endless.Exceptions\Endless.Exceptions.csproj", "{D3074FCC-3CD8-4144-B36E-026CE15164E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Diagnostics.Exceptions", "Endless.Exceptions\Endless.Diagnostics.Exceptions.csproj", "{D3074FCC-3CD8-4144-B36E-026CE15164E2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Exceptions.Composition", "Endless.Exceptions.Composition\Endless.Exceptions.Composition.csproj", "{BF096C65-D635-446C-B406-280E4E022DDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Diagnostics.Exceptions.Composition", "Endless.Exceptions.Composition\Endless.Diagnostics.Exceptions.Composition.csproj", "{BF096C65-D635-446C-B406-280E4E022DDF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.EnityFrameWorkCore", "Endless.EnityFrameWorkCore\Endless.EnityFrameWorkCore.csproj", "{68973834-FCDE-4163-9CF7-D32DB89FBA3E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Diagnostics.Exceptions.EnityFrameworkCore", "Endless.EnityFrameWorkCore\Endless.Diagnostics.Exceptions.EnityFrameworkCore.csproj", "{68973834-FCDE-4163-9CF7-D32DB89FBA3E}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Collections", "Endless.Collections\Endless.Collections.csproj", "{EEC1230D-7D3C-4237-BE17-E56A65B0F208}"
 EndProject
@@ -26,6 +26,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Data", "Endless.Data\Endless.Data.csproj", "{6CE89B90-05D0-4905-BF05-A10BD8ADB9C3}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Configuration", "Endless.Configuration\Endless.Configuration.csproj", "{84C7575D-259E-46E3-B8DC-34D15B1CAD18}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Diagnostics", "Endless.Diagnostics\Endless.Diagnostics.csproj", "{A8C9ED67-8C27-468A-9CBF-5FD58C511C99}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Documents", "Documents\Documents.csproj", "{C63213C7-DCB8-43B3-9D58-D12F1DA75EDA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Messaging.Rabbit", "Endless.Messaging.Rabbit\Endless.Messaging.Rabbit.csproj", "{84076E3B-1B43-47F5-A6EB-A2AEF58C679C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +87,18 @@ Global
 		{84C7575D-259E-46E3-B8DC-34D15B1CAD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84C7575D-259E-46E3-B8DC-34D15B1CAD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84C7575D-259E-46E3-B8DC-34D15B1CAD18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8C9ED67-8C27-468A-9CBF-5FD58C511C99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8C9ED67-8C27-468A-9CBF-5FD58C511C99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8C9ED67-8C27-468A-9CBF-5FD58C511C99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8C9ED67-8C27-468A-9CBF-5FD58C511C99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C63213C7-DCB8-43B3-9D58-D12F1DA75EDA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C63213C7-DCB8-43B3-9D58-D12F1DA75EDA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C63213C7-DCB8-43B3-9D58-D12F1DA75EDA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C63213C7-DCB8-43B3-9D58-D12F1DA75EDA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84076E3B-1B43-47F5-A6EB-A2AEF58C679C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84076E3B-1B43-47F5-A6EB-A2AEF58C679C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84076E3B-1B43-47F5-A6EB-A2AEF58C679C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84076E3B-1B43-47F5-A6EB-A2AEF58C679C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

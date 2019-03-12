@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
 
-namespace Endless.Exceptions
+namespace Endless.Diagnostics.Exceptions
 {
     public static class WithExceptionHandling
     {

@@ -1,10 +1,9 @@
 using System;
-using System.Diagnostics.Contracts;
 
-namespace Endless.Exceptions.Composition
+namespace Endless.Diagnostics.Exceptions.Composition
 {
     [ExportAsExceptionLogger(typeof(AggregateException))]
-    public class AggregateExceptionLogger : Endless.Exceptions.AggregateExceptionLogger
+    public class AggregateExceptionLogger : Exceptions.AggregateExceptionLogger
     {
     }
 }

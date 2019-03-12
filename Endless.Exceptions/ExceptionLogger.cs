@@ -1,8 +1,7 @@
 using System;
 using System.Diagnostics;
 
-
-namespace Endless.Exceptions
+namespace Endless.Diagnostics.Exceptions
 {
     
     public abstract class ExceptionLogger<TException> :  IExceptionLogger where TException:Exception 

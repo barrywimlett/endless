@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Endless.ComponentModel
+﻿namespace Endless.ComponentModel
 {
     public class Class1
     {

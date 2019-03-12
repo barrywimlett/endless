@@ -1,7 +1,7 @@
 using System.Data.Entity.Infrastructure;
 using System.Diagnostics;
 using System.Linq;
-using Endless.Exceptions;
+using Endless.Diagnostics.Exceptions;
 
 namespace Endless.EntityFramework
 {

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Endless.Exceptions\Endless.Exceptions.csproj" />
+    <ProjectReference Include="..\Endless.Exceptions\Endless.Diagnostics.Exceptions.csproj" />
   </ItemGroup>
   
 </Project>

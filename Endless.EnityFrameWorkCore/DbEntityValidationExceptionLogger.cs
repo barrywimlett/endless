@@ -2,7 +2,7 @@
 using System.Data.Entity.Validation;
 using System.Diagnostics;
 using System.Linq;
-using Endless.Exceptions;
+using Endless.Diagnostics.Exceptions;
 
 namespace Endless.EnityFrameWorkCore
 {

@@ -4,7 +4,7 @@ using System.Composition;
 using System.Diagnostics.Contracts;
 using System.Linq;
 
-namespace Endless.Exceptions.Composition
+namespace Endless.Diagnostics.Exceptions.Composition
 {
     [Shared]
     public class ExceptionLoggerFactory

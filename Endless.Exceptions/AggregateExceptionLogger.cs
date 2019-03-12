@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics.Contracts;
 
-namespace Endless.Exceptions
+namespace Endless.Diagnostics.Exceptions
 {
     
     public class AggregateExceptionLogger : ExceptionLogger<AggregateException>

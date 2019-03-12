@@ -1,7 +1,7 @@
 using System;
 using System.Composition;
 
-namespace Endless.Exceptions.Composition
+namespace Endless.Diagnostics.Exceptions.Composition
 {
     [Export(typeof(IExceptionLogger))]
     [ExportAsExceptionLogger(typeof(Exception))]

@@ -1,12 +1,8 @@
 ﻿using System;
 using System.Composition;
-using System.Diagnostics;
 using System.Diagnostics.Contracts;
 
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Endless.Exceptions.Composition
+namespace Endless.Diagnostics.Exceptions.Composition
 {
     [MetadataAttribute]
     [AttributeUsage(AttributeTargets.Class | AttributeTargets.Property,

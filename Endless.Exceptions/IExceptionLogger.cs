@@ -1,6 +1,6 @@
 using System;
 
-namespace Endless.Exceptions
+namespace Endless.Diagnostics.Exceptions
 {
     public interface IExceptionLogger
     {

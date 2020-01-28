@@ -4,6 +4,7 @@ using RabbitMQ.Client.Framing;
 
 namespace Endless.Messaging.Rabbit.Generic
 {
+    
     public class BasicRabbitMessage<TBody> : IBasicRabbitMessage, IBasicRabbitMessage<TBody>
         where TBody : class, new()
     {

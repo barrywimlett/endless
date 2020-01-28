@@ -9,6 +9,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="RabbitBase.cs" />
+    <Compile Remove="_deadcode\Generic\BasicRabbitMessage.cs" />
+    <Compile Remove="_deadcode\Generic\GenericDeliverEventArgs.cs" />
+    <Compile Remove="_deadcode\Generic\RabbitListener.cs" />
+    <Compile Remove="_deadcode\Generic\RabbitSender.cs" />
+    <Compile Remove="_deadcode\Generic\ReplyingRabbitListener.cs" />
+    <Compile Remove="_deadcode\IListenerFactory.cs" />
+    <Compile Remove="_deadcode\ISenderFactory.cs" />
+    <Compile Remove="_deadcode\ListenerFactory.cs" />
+    <Compile Remove="_deadcode\SenderFactory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="_deadcode\RabbitBase.cs" />
+    <None Include="_deadcode\Generic\BasicRabbitMessage.cs" />
+    <None Include="_deadcode\Generic\GenericDeliverEventArgs.cs" />
+    <None Include="_deadcode\Generic\RabbitListener.cs" />
+    <None Include="_deadcode\Generic\RabbitSender.cs" />
+    <None Include="_deadcode\Generic\ReplyingRabbitListener.cs" />
+    <None Include="_deadcode\IListenerFactory.cs" />
+    <None Include="_deadcode\ISenderFactory.cs" />
+    <None Include="_deadcode\ListenerFactory.cs" />
+    <None Include="_deadcode\SenderFactory.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CodeAnalysis.FxCopAnalyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.CodeQuality.Analyzers" Version="2.9.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="12.0.1" />
     <PackageReference Include="RabbitMQ.Client" Version="5.1.0" />
   </ItemGroup>

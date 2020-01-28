@@ -1,14 +1,12 @@
-﻿namespace Endless
+﻿using System.Windows.Media.Imaging;
+
+namespace Endless.Windows
 {
-    using System.Windows;
-    using System.Windows.Media.Imaging;
-
-
     public partial class SplashWindow : MahApps.Metro.Controls.MetroWindow
     {
-        public SplashWindow()
+        public SplashWindow() :base()
         {
-            InitializeComponent();
+            //InitializeComponent();
 
             BitmapImage logo = new BitmapImage();
             logo.CacheOption = BitmapCacheOption.OnLoad;

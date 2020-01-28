@@ -4,7 +4,7 @@ using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using Endless.Messaging.Rabbit.Interfaces;
 
-namespace Endless.Messaging.Rabbit.Generic
+namespace Endless.Messaging.Rabbit.RendezVous
 {
     public class RendezvousGroup : IRendezvousGroup
     {

@@ -68,6 +68,8 @@ namespace Endless
             Contract.Assert(localViewModel != null);
             this.ViewModel = localViewModel;
             this.Name = name;
+
+            
         }
 
         public NotifyProperty(IModelBase localViewModel, string name,T initialValue) : this(localViewModel, name)
@@ -79,5 +81,25 @@ namespace Endless
         {
             return string.Format("{0}={1}", this.Name, this.Value);
         }
+    }
+
+    public static class NotifyPropertyExtension
+    {
+        public static NotifyProperty<TValue> AddNotifyProperty<TValue>(this IModelBase localViewModel, string name)
+        {
+            var prop = new NotifyProperty<TValue>(localViewModel, name);
+            localViewModel.AddProperty(name, prop);
+
+            return prop;
+        }
+
+        public static NotifyProperty<TValue> AddNotifyProperty<TValue>(this IModelBase localViewModel, string name, TValue initialValue) 
+        {
+            var prop = new NotifyProperty<TValue>(localViewModel, name, initialValue);
+            localViewModel.AddProperty(name, prop);
+
+            return prop;
+        }
+
     }
 }

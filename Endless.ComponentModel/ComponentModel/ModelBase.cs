@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel;
 
 namespace Endless
@@ -6,7 +7,12 @@ namespace Endless
     public abstract class ModelBase : IModelBase, INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
+        readonly Dictionary<string, INotifyProperty> properties = new Dictionary<string, INotifyProperty>();
         
+        public void AddProperty(string name,INotifyProperty property)
+        {
+            this.properties.Add(name, property);
+        }
         virtual protected internal void NotifyPropertyChanges(string propertyName)
         {
 

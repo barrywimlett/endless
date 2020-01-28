@@ -17,8 +17,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Diagnostics.Excepti
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Diagnostics.Exceptions.Composition", "Endless.Exceptions.Composition\Endless.Diagnostics.Exceptions.Composition.csproj", "{BF096C65-D635-446C-B406-280E4E022DDF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Diagnostics.Exceptions.EnityFrameworkCore", "Endless.EnityFrameWorkCore\Endless.Diagnostics.Exceptions.EnityFrameworkCore.csproj", "{68973834-FCDE-4163-9CF7-D32DB89FBA3E}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.Collections", "Endless.Collections\Endless.Collections.csproj", "{EEC1230D-7D3C-4237-BE17-E56A65B0F208}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Endless.ComponentModel", "Endless.ComponentModel\Endless.ComponentModel.csproj", "{EC0F22B9-9845-4059-B57E-B90F59EA4198}"
@@ -67,10 +65,6 @@ Global
 		{BF096C65-D635-446C-B406-280E4E022DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF096C65-D635-446C-B406-280E4E022DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF096C65-D635-446C-B406-280E4E022DDF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{68973834-FCDE-4163-9CF7-D32DB89FBA3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{68973834-FCDE-4163-9CF7-D32DB89FBA3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{68973834-FCDE-4163-9CF7-D32DB89FBA3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{68973834-FCDE-4163-9CF7-D32DB89FBA3E}.Release|Any CPU.Build.0 = Release|Any CPU
 		{EEC1230D-7D3C-4237-BE17-E56A65B0F208}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{EEC1230D-7D3C-4237-BE17-E56A65B0F208}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EEC1230D-7D3C-4237-BE17-E56A65B0F208}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -10,7 +10,7 @@ namespace Endless.Messaging.Rabbit
         protected IModel _channel;
         
 
-        protected ISerializer _serializer = new JasonSerializer();
+        
 
         public RabbitBase(IRabbitMessagingSettings messageSettings)
         {

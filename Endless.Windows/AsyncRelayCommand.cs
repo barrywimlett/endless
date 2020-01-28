@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Diagnostics.Contracts;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Endless.Diagnostics.Exceptions;
 
 namespace Endless.Windows
 {

@@ -17,18 +17,21 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="MahApps.Metro" Version="1.6.5" />
     <PackageReference Include="System.Composition" Version="1.2.0" />
     <PackageReference Include="System.Diagnostics.Debug" Version="4.3.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\Endless.ComponentModel\Endless.ComponentModel.csproj" />
+    <ProjectReference Include="..\Endless.Exceptions\Endless.Diagnostics.Exceptions.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
     <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   

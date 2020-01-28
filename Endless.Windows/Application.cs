@@ -103,15 +103,15 @@ namespace Endless.Windows
             public class ExceptionLogger : IExceptionLogger
             {
                 [ImportingConstructor]
-                public ExceptionLogger(ILogger logger)
+                public ExceptionLogger()
                 {
                     //this.logger = logger;
                 }
 
                 public void LogException(Exception ex)
                 {
-                    logger.Error(ex.Message);
-                    logger.Error(ex.Message);
+                    Trace.TraceError(ex.Message);
+                    Trace.TraceError(ex.Message);
                 }
             }
 

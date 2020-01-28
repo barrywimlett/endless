@@ -3,9 +3,6 @@ using System.ComponentModel;
 
 namespace Endless
 {
-    
-   
-
     /// <summary>
     /// Interface for ViewModelBase
     /// </summary>
@@ -15,8 +12,11 @@ namespace Endless
 
     public interface IModelBase
     {
-    event PropertyChangedEventHandler PropertyChanged;
-    void NotifyPropertyChanges(string propertyName);
-    void NotifyPropertyChanges(string propertyName, Type type, object oldValue, object newValue);
+        event PropertyChangedEventHandler PropertyChanged;
+
+        void NotifyPropertyChanges(string propertyName);
+        void NotifyPropertyChanges(string propertyName, Type type, object oldValue, object newValue);
+
+        void AddProperty(string name, INotifyProperty property);
     }
 }

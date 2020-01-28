@@ -1,5 +1,6 @@
 using System;
 using Endless.Messaging.Rabbit.Interfaces;
+using Endless.Messaging.Rabbit.MessageFactories;
 using RabbitMQ.Client.Events;
 
 namespace Endless.Messaging.Rabbit.Generic
@@ -34,7 +35,7 @@ namespace Endless.Messaging.Rabbit.Generic
                 var genericArgs = args as GenericDeliverEventArgs<TMessageBody>;
                 if (genericArgs != null)
                 {
-                    var message = new BasicRabbitMessage<TMessageBody>(genericArgs.MessageBody, args.BasicProperties);
+                    var message = new RabbitMessage(args.BasicProperties, genericArgs.MessageBody);
                     MessageReceived(message);
                 }
             }

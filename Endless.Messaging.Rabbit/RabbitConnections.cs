@@ -34,7 +34,7 @@ namespace Endless.Messaging.Rabbit
 
         public bool HasOuboundConnection => _outboundConnection != null;
 
-        public IConnection InboundConnection
+        public RabbitMQ.Client.IConnection InboundConnection
         {
             get
             {
@@ -49,7 +49,7 @@ namespace Endless.Messaging.Rabbit
             protected set => _inboundConnection = value;
         }
 
-        public IConnection OutboundConnection
+        public RabbitMQ.Client.IConnection OutboundConnection
         {
             get
             {

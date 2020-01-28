@@ -73,4 +73,52 @@ namespace Endless
 
         
     }
+
+    public class DictionaryWithKeyGen<TKey, TObject>
+    {
+        readonly Dictionary<TKey,TObject> dict=new Dictionary<TKey, TObject>();
+        private Func<TObject, TKey> generateKey;
+
+        public DictionaryWithKeyGen(Func<TObject, TKey> generateKey)
+        {
+            this.generateKey = generateKey;
+        }
+
+        public bool Add(TObject obj)
+        {
+            bool added = false;
+            TKey key = generateKey(obj);
+            if (dict.ContainsKey(key))
+            {
+                //
+            }
+            else
+            {
+                dict.Add(key,obj);
+            }
+
+            return added;
+        }
+
+        public bool Remove(TObject obj)
+        {
+            bool removed = false;
+            TKey key = generateKey(obj);
+            if (dict.ContainsKey(key))
+            {
+                dict.Remove(key);
+            }
+            else
+            {
+                //
+            }
+
+            return removed;
+        }
+
+        public bool ContainsKey(TKey key)
+        {
+            return dict.ContainsKey(key);
+        }
+    }
 }

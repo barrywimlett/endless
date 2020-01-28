@@ -1,42 +1,13 @@
 ﻿using System.Diagnostics;
 using System.Text;
 using Endless.Messaging.Rabbit.Interfaces;
+using Endless.Messaging.Rabbit.MessageFactories;
 using Newtonsoft.Json;
 using RabbitMQ.Client;
 
 namespace Endless.Messaging.Rabbit.Generic
 {
-
-    public  class RabbitConnection
-    {
-        internal readonly IConnection _connection;
-        protected IModel _channel;
-        private bool _dispatchConsumersAsync;
-        protected RabbitConnection(IRabbitMessagingSettings messageSettings, bool dispatchConsumersAsync)
-
-        {
-
-            ConnectionFactory factory = new ConnectionFactory
-            {
-                HostName = messageSettings.HostName,
-                RequestedHeartbeat = messageSettings.HeartbeatTimeout,
-                AutomaticRecoveryEnabled = true,
-                HandshakeContinuationTimeout = new System.TimeSpan(0, messageSettings.HandshakeTimeout, 0),
-                NetworkRecoveryInterval = new System.TimeSpan(0, messageSettings.NetworkRecoveryInterval, 0),
-                UserName = messageSettings.Username,
-                Password = messageSettings.Password,
-
-                DispatchConsumersAsync = _dispatchConsumersAsync
-            };
-
-            // CODEREVIEW:: really ought to reuse connectons - best practice seems to
-            // suggest one inbound and one outbound connection per process.
-            _connection = factory.CreateConnection();
-
-            _channel = _connection.CreateModel();
-        }
-    }
-        public class RabbitSender<TMessageBody> : RabbitConnection,IRabbitSender<TMessageBody>
+    public class RabbitSender<TMessageBody> : RabbitConnection,IRabbitSender<TMessageBody>
         where TMessageBody : class, new()
     {
         private readonly IRabbitMessagingSettings _messagingSettings;
@@ -63,12 +34,7 @@ namespace Endless.Messaging.Rabbit.Generic
 
         
 
-        public void Send(TMessageBody body)
-        {
-            var envelope = GetEnvelope(body);
-            Send(envelope);
-        }
-
+        
         public void SendBasicMessage(IBasicRabbitMessage<TMessageBody> message)
         {
             _channel.BasicPublish(string.Empty, _queueName, message.BasicProperties, Encoding.UTF8.GetBytes(JsonConvert.SerializeObject(message.MessageBody)));
@@ -92,4 +58,6 @@ namespace Endless.Messaging.Rabbit.Generic
             }
         }
     }
+
+    
 }

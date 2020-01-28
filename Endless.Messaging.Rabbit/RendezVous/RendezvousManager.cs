@@ -4,7 +4,7 @@ using System.Diagnostics;
 using Endless.Messaging.Rabbit.Interfaces;
 using RabbitMQ.Client.Events;
 
-namespace Endless.Messaging.Rabbit.Generic
+namespace Endless.Messaging.Rabbit.RendezVous
 {
     public class RendezvousManager : IRendezvousManager
     {

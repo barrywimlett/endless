@@ -1,0 +1,80 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Endless.ComponentModel</name>
+    </assembly>
+    <members>
+        <member name="T:Endless.ComponentModel.Validation.DelegateRule`1">
+            <summary>
+            Determines whether or not an object of type <typeparamref name="T"/> satisfies a rule and
+            provides an error if it does not.
+            </summary>
+            <typeparam name="T">The type of the object the rule can be applied to.</typeparam>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Endless.ComponentModel.Validation.DelegateRule`1.#ctor(System.Object,System.Func{`0,System.Boolean})" -->
+        <member name="M:Endless.ComponentModel.Validation.DelegateRule`1.IsValid(`0)">
+            <summary>
+            Applies the rule to the specified object.
+            </summary>
+            <param name="obj">The object to apply the rule to.</param>
+            <returns>
+            <c>true</c> if the object satisfies the rule, otherwise <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Endless.ComponentModel.Validation.Rule`1">
+            <summary>
+            A named rule containing an error to be used if the rule fails.
+            </summary>
+            <typeparam name="T">The type of the object the rule applies to.</typeparam>
+        </member>
+        <!-- Badly formed XML comment ignored for member "M:Endless.ComponentModel.Validation.Rule`1.#ctor(System.Object)" -->
+        <member name="P:Endless.ComponentModel.Validation.Rule`1.Error">
+            <summary>
+            Gets the error message if the rules fails.
+            </summary>
+            <value>The error message if the rules fails.</value>
+        </member>
+        <member name="M:Endless.ComponentModel.Validation.Rule`1.IsValid(`0)">
+            <summary>
+            Applies the rule to the specified object.
+            </summary>
+            <param name="obj">The object to apply the rule to.</param>
+            <returns>
+            <c>true</c> if the object satisfies the rule, otherwise <c>false</c>.
+            </returns>
+        </member>
+        <member name="T:Endless.CalculatedNotifyProperty`2">
+            <summary>
+            Allows a field to be calculated based on contents of the viewModel
+            </summary>
+            <typeparam name="T">type of the field</typeparam>
+            <typeparam name="V">type of the viewmodel, which should allow access to the peoperties used to execute the calculation</typeparam>
+        </member>
+        <member name="T:Endless.NotifyProperty`1">
+            <summary>
+            Basic notify property takes a viewModel which impliments IViewModelBase 
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="T:Endless.IModelBase">
+            <summary>
+            Interface for ViewModelBase
+            </summary>
+            <remarks>
+            Needed to give a well known and accessible way of calling "NotifyPropertyChanges" as the event cannot be invoked externally
+            </remarks>
+        </member>
+        <member name="T:Endless.IViewModelProvider">
+            <summary>
+            View model provider interface
+            </summary>
+        </member>
+        <member name="M:Endless.IViewModelProvider.GetViewModel``1">
+            <summary>
+            Gets the view model.
+            </summary>
+            <typeparam name="T">The view model type</typeparam>
+            <returns>The view model instance</returns>
+        </member>
+    </members>
+</doc>
